@@ -11,6 +11,8 @@ a nice reusable code snippet.
 This creates a ribbon in the top left corner of the screen, like the 
 "Fork me on GitHub" ribbon that you may have seen.
 
+![Demo screenshot](demo.png)
+
 By default the element opacity is set to 0.75 and pointer-events set to none. 
 This is to allow users to be able to see through the indicator and interact 
 with any element underneath it, like a top nav bar for example. 
@@ -31,7 +33,7 @@ I've tried to keep usage as simple as possible. It involves including a single
 script on your pages.
 
 There are two ways you can configure it, query string parameters or a global
-javascript variable environmentIndicatorOptions.
+javascript variable, environmentIndicatorOptions.
 
 If you use query string parameters you can not load the script with either
 async or defer. (This may actually work under some circumstances, but it can
@@ -40,8 +42,7 @@ is an example below for hash value colours).
 
 ### CDN
 
-Feel free to use the jsDelivr CDN to save hosting the file yourself.
- 
+Feel free to use the jsDelivr CDN to save hosting the file yourself... 
 [https://cdn.jsdelivr.net/environment-indicator/latest/environment-indicator.min.js](https://cdn.jsdelivr.net/environment-indicator/latest/environment-indicator.min.js)
 
 Or you can reference specific versions...
