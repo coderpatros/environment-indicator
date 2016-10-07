@@ -28,6 +28,12 @@ async or defer. (This may actually work under some circumstances, but it can
 break without warning.) And remember to encode any values as required (there 
 is an example below for hash value colours).
 
+### CDN
+
+Feel free to use the jsDelivr CDN to save hosting the file yourself.
+ 
+[https://cdn.jsdelivr.net/environment-indicator/1.0.0/environment-indicator.min.js](https://cdn.jsdelivr.net/environment-indicator/1.0.0/environment-indicator.min.js)
+
 ### Available Options
 
 These are the default options...
