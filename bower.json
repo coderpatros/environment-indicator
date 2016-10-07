@@ -1,0 +1,10 @@
+{
+  "name": "environment-indicator",
+  "main": "environment-indicator.min.js",
+  "homepage": "https://github.com/patros/environment-indicator",
+  "authors": [
+    "Patrick Dwyer <pat@patdwyer.com.au>"
+  ],
+  "description": "Visual environment indicator for web apps (i.e. dev, uat, staging, etc)",
+  "license": "GPL v3"
+}
