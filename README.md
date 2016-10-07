@@ -11,6 +11,12 @@ a nice reusable code snippet.
 This creates a ribbon in the top left corner of the screen, like the 
 "Fork me on GitHub" ribbon that you may have seen.
 
+As I try this out on more sites I find css rules, that when inherited,
+mess up the rendering of the indicator. If it doesn't work for you please
+create an issue on GitHub with a link to the site that it doesn't work on.
+If it's a non-public site, i.e. a web app on an internal corporate network
+please include a list of the computed styles from your browsers dev tools.
+
 ## Licence
 
 This code is licenced under the GPL v3.
@@ -49,7 +55,9 @@ var options = {
     padding: "5px",
     color: "white",
     "background-color": "#15db19",
+    "line-height": "initial",
     "text-align": "center",
+    "font-family": "Arial",
     "font-weight": "bold",
     "font-size": "18px",
     opacity: "0.75",
