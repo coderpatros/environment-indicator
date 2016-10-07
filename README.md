@@ -11,6 +11,10 @@ a nice reusable code snippet.
 This creates a ribbon in the top left corner of the screen, like the 
 "Fork me on GitHub" ribbon that you may have seen.
 
+By default the element opacity is set to 0.75 and pointer-events set to none. 
+This is to allow users to be able to see through the indicator and interact 
+with any element underneath it, like a top nav bar for example. 
+
 As I try this out on more sites I find css rules, that when inherited,
 mess up the rendering of the indicator. If it doesn't work for you please
 create an issue on GitHub with a link to the site that it doesn't work on.
