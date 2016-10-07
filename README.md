@@ -42,7 +42,10 @@ is an example below for hash value colours).
 
 Feel free to use the jsDelivr CDN to save hosting the file yourself.
  
-[https://cdn.jsdelivr.net/environment-indicator/1.0.0/environment-indicator.min.js](https://cdn.jsdelivr.net/environment-indicator/1.0.0/environment-indicator.min.js)
+[https://cdn.jsdelivr.net/environment-indicator/latest/environment-indicator.min.js](https://cdn.jsdelivr.net/environment-indicator/latest/environment-indicator.min.js)
+
+Or you can reference specific versions...
+[https://cdn.jsdelivr.net/environment-indicator/1.0.1/environment-indicator.min.js](https://cdn.jsdelivr.net/environment-indicator/1.0.1/environment-indicator.min.js)
 
 ### Available Options
 
