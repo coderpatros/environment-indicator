@@ -15,13 +15,14 @@ This creates a ribbon in the top left corner of the screen, like the
 
 By default the element opacity is set to 0.75 and pointer-events set to none. 
 This is to allow users to be able to see through the indicator and interact 
-with any element underneath it, like a top nav bar for example. 
+with any element underneath it, like a top navigation bar for example. 
 
 As I try this out on more sites I find css rules, that when inherited,
 mess up the rendering of the indicator. If it doesn't work for you please
 create an issue on GitHub with a link to the site that it doesn't work on.
 If it's a non-public site, i.e. a web app on an internal corporate network
 please include a list of the computed styles from your browsers dev tools.
+Or if you're up to it, create a fix and pull request.
 
 ## Licence
 
@@ -46,7 +47,7 @@ Feel free to use the jsDelivr CDN to save hosting the file yourself...
 [https://cdn.jsdelivr.net/environment-indicator/latest/environment-indicator.min.js](https://cdn.jsdelivr.net/environment-indicator/latest/environment-indicator.min.js)
 
 Or you can reference specific versions...  
-[https://cdn.jsdelivr.net/environment-indicator/1.0.1/environment-indicator.min.js](https://cdn.jsdelivr.net/environment-indicator/1.0.1/environment-indicator.min.js)
+[https://cdn.jsdelivr.net/environment-indicator/1.1.0/environment-indicator.min.js](https://cdn.jsdelivr.net/environment-indicator/1.1.0/environment-indicator.min.js)
 
 ### Available Options
 
@@ -55,9 +56,7 @@ These are the default options...
 var options = {
     content: "environment indicator",
     position: "fixed",
-    width: "210px",
-    top: "52px",
-    left: "-43px",
+    "transform-origin": "left top",
     "z-index": 10000,
     transform: "rotate(315deg)",
     padding: "5px",
@@ -80,15 +79,18 @@ as well.
 
 The content option needs to be text, no html.
 
+Four css values are calculated, these are left, top, padding-left and 
+padding-right. You can override these values, they will be honoured.
+
 ### Query String Examples
 
 ```
-<script src="environment-indicator.js?content=Training Environment&background-color=deeppink"></script>
+<script src="https://cdn.jsdelivr.net/environment-indicator/latest/environment-indicator.js?content=Training Environment&background-color=deeppink"></script>
 ```
 
 And this example demonstrates encoding a background-color value of #4286f4...
 ```
-<script src="environment-indicator.js?content=Training Environment&background-color=%234286f4"></script>
+<script src="https://cdn.jsdelivr.net/environment-indicator/latest/environment-indicator.js?content=Training Environment&background-color=%234286f4"></script>
 ```
 
 ### Global Variable Example
@@ -100,5 +102,5 @@ And this example demonstrates encoding a background-color value of #4286f4...
         "background-color": "deeppink"
     };
 </script>
-<script src="environment-indicator.js"></script>
+<script src="https://cdn.jsdelivr.net/environment-indicator/latest/environment-indicator.js"></script>
 ```

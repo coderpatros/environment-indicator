@@ -24,13 +24,22 @@
     }
     document.body.appendChild(div);
 
+    var leftOffset = Math.ceil(Math.sqrt(div.offsetHeight * div.offsetHeight / 2));
+
+    if (!("left" in options)) div.style.left =  -leftOffset + "px";
+
+    var padding = Math.ceil(5 + Math.sqrt((div.offsetHeight * div.offsetHeight) - (leftOffset * leftOffset)));
+    if (!("padding-left" in options)) div.style.paddingLeft = padding + "px";
+    if (!("padding-right" in options)) div.style.paddingRight = div.style.paddingLeft;
+
+    var topOffset = Math.floor(Math.sqrt(div.offsetWidth * div.offsetWidth / 2) - leftOffset);
+    if (!("top" in options)) div.style.top = topOffset + "px";
+
     function createOptions(providedOptions) {
         var options = {
             content: "environment indicator",
             position: "fixed",
-            width: "210px",
-            top: "52px",
-            left: "-43px",
+            "transform-origin": "left top",
             "z-index": 10000,
             transform: "rotate(315deg)",
             padding: "5px",
