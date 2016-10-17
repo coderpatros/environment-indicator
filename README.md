@@ -8,7 +8,7 @@ are.
 CSS has come a long way in recent years, and so I thought it was time I created
 a nice reusable code snippet.
 
-This creates a ribbon in the top left corner of the screen, like the 
+This creates a ribbon in the top left (or right) corner of the screen, like the 
 "Fork me on GitHub" ribbon that you may have seen.
 
 ![Demo screenshot](demo.png)
@@ -47,7 +47,7 @@ Feel free to use the jsDelivr CDN to save hosting the file yourself...
 [https://cdn.jsdelivr.net/environment-indicator/latest/environment-indicator.min.js](https://cdn.jsdelivr.net/environment-indicator/latest/environment-indicator.min.js)
 
 Or you can reference specific versions...  
-[https://cdn.jsdelivr.net/environment-indicator/1.1.0/environment-indicator.min.js](https://cdn.jsdelivr.net/environment-indicator/1.1.0/environment-indicator.min.js)
+[https://cdn.jsdelivr.net/environment-indicator/1.2.0/environment-indicator.min.js](https://cdn.jsdelivr.net/environment-indicator/1.2.0/environment-indicator.min.js)
 
 ### Available Options
 
@@ -55,6 +55,7 @@ These are the default options...
 ```
 var options = {
     content: "environment indicator",
+    onRight: false,
     position: "fixed",
     "transform-origin": "left top",
     "z-index": 10000,
@@ -72,15 +73,20 @@ var options = {
 };
 ```
 
-With the exception of the content option, each option is applied as a style
-property on the dom element used as the indicator. Additional style
+If ```onRight``` is true the defaults for ```transform``` and 
+```transform-origin``` will be set to ```rotate(45deg)``` and
+```"right top"``` respectively.
+
+With the exception of the content and onRight options, each option is applied
+as a style property on the dom element used as the indicator. Additional style
 properties that aren't in the above list can be provided and will be applied 
 as well.
 
 The content option needs to be text, no html.
 
-Four css values are calculated, these are left, top, padding-left and 
-padding-right. You can override these values, they will be honoured.
+Four css values are calculated, these are left (or right if onRight is true), 
+top, padding-left and padding-right. You can override these values, 
+they will be honoured.
 
 ### Query String Examples
 

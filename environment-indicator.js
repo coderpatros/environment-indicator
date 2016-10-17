@@ -1,6 +1,6 @@
 /**
  * @name environment-indicator
- * @version 1.1.0
+ * @version 1.2.0
  * @author Patrick Dwyer
  * @copyright Copyright (C) 2016 Patrick Dwyer
  *
@@ -36,6 +36,9 @@
     div.appendChild(t);
     delete options.content;
 
+    var onRight = options.onRight;
+    delete options.onRight;
+
     for (var option in options) {
         if (options.hasOwnProperty(option)) {
             div.style[option] = options[option];
@@ -43,20 +46,27 @@
     }
     document.body.appendChild(div);
 
-    var leftOffset = Math.ceil(Math.sqrt(div.offsetHeight * div.offsetHeight / 2));
+    var sideOffset = Math.ceil(Math.sqrt(div.offsetHeight * div.offsetHeight / 2));
 
-    if (!("left" in options)) div.style.left =  -leftOffset + "px";
+    if (!("left" in options || "right" in options)) {
+        if (onRight) {
+            div.style.right = -sideOffset + "px";
+        } else {
+            div.style.left =  -sideOffset + "px";
+        }
+    }
 
-    var padding = Math.ceil(5 + Math.sqrt((div.offsetHeight * div.offsetHeight) - (leftOffset * leftOffset)));
+    var padding = Math.ceil(5 + Math.sqrt((div.offsetHeight * div.offsetHeight) - (sideOffset * sideOffset)));
     if (!("padding-left" in options)) div.style.paddingLeft = padding + "px";
     if (!("padding-right" in options)) div.style.paddingRight = div.style.paddingLeft;
 
-    var topOffset = Math.floor(Math.sqrt(div.offsetWidth * div.offsetWidth / 2) - leftOffset);
+    var topOffset = Math.floor(Math.sqrt(div.offsetWidth * div.offsetWidth / 2) - sideOffset);
     if (!("top" in options)) div.style.top = topOffset + "px";
 
     function createOptions(providedOptions) {
         var options = {
             content: "environment indicator",
+            onRight: false,
             position: "fixed",
             "transform-origin": "left top",
             "z-index": 10000,
@@ -72,6 +82,10 @@
             opacity: "0.75",
             "pointer-events": "none"
         };
+        if (providedOptions.onRight) {
+            options.transform = "rotate(45deg)";
+            options["transform-origin"] = "right top";
+        }
         for (var optionName in providedOptions) {
             if (providedOptions.hasOwnProperty(optionName)) {
                 options[optionName] = providedOptions[optionName];
