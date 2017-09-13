@@ -44,10 +44,10 @@ is an example below for hash value colours).
 ### CDN
 
 Feel free to use the jsDelivr CDN to save hosting the file yourself...  
-[https://cdn.jsdelivr.net/environment-indicator/latest/environment-indicator.min.js](https://cdn.jsdelivr.net/environment-indicator/latest/environment-indicator.min.js)
+[https://cdn.jsdelivr.net/gh/patros/environment-indicator@latest/environment-indicator.min.js](https://cdn.jsdelivr.net/gh/patros/environment-indicator@latest/environment-indicator.min.js)
 
 Or you can reference specific versions...  
-[https://cdn.jsdelivr.net/environment-indicator/1.2.0/environment-indicator.min.js](https://cdn.jsdelivr.net/environment-indicator/1.2.0/environment-indicator.min.js)
+[https://cdn.jsdelivr.net/gh/patros/environment-indicator@1.2.0/environment-indicator.min.js](https://cdn.jsdelivr.net/gh/patros/environment-indicator@1.2.0/environment-indicator.min.js)
 
 ### Available Options
 
@@ -91,12 +91,12 @@ they will be honoured.
 ### Query String Examples
 
 ```
-<script src="https://cdn.jsdelivr.net/environment-indicator/latest/environment-indicator.js?content=Training Environment&background-color=deeppink"></script>
+<script src="https://cdn.jsdelivr.net/gh/patros/environment-indicator@latest/environment-indicator.js?content=Training Environment&background-color=deeppink"></script>
 ```
 
 And this example demonstrates encoding a background-color value of #4286f4...
 ```
-<script src="https://cdn.jsdelivr.net/environment-indicator/latest/environment-indicator.js?content=Training Environment&background-color=%234286f4"></script>
+<script src="https://cdn.jsdelivr.net/gh/patros/environment-indicator@latest/environment-indicator.js?content=Training Environment&background-color=%234286f4"></script>
 ```
 
 ### Global Variable Example
@@ -108,5 +108,5 @@ And this example demonstrates encoding a background-color value of #4286f4...
         "background-color": "deeppink"
     };
 </script>
-<script src="https://cdn.jsdelivr.net/environment-indicator/latest/environment-indicator.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/patros/environment-indicator@latest/environment-indicator.js"></script>
 ```
