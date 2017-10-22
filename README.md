@@ -24,10 +24,6 @@ If it's a non-public site, i.e. a web app on an internal corporate network
 please include a list of the computed styles from your browsers dev tools.
 Or if you're up to it, create a fix and pull request.
 
-## Licence
-
-This code is licenced under the GPL v3.
-
 ## Usage
 
 I've tried to keep usage as simple as possible. It involves including a single
