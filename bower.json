@@ -6,5 +6,5 @@
     "Patrick Dwyer <pat@patdwyer.com.au>"
   ],
   "description": "Visual environment indicator for web apps (i.e. dev, uat, staging, etc)",
-  "license": "GPL v3"
+  "license": "MIT"
 }
