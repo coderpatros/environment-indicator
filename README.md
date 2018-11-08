@@ -17,13 +17,6 @@ By default the element opacity is set to 0.75 and pointer-events set to none.
 This is to allow users to be able to see through the indicator and interact 
 with any element underneath it, like a top navigation bar for example. 
 
-As I try this out on more sites I find css rules, that when inherited,
-mess up the rendering of the indicator. If it doesn't work for you please
-create an issue on GitHub with a link to the site that it doesn't work on.
-If it's a non-public site, i.e. a web app on an internal corporate network
-please include a list of the computed styles from your browsers dev tools.
-Or if you're up to it, create a fix and pull request.
-
 ## Usage
 
 I've tried to keep usage as simple as possible. It involves including a single
