@@ -30,6 +30,8 @@ async or defer. (This may actually work under some circumstances, but it can
 break without warning.) And remember to encode any values as required (there 
 is an example below for hash value colours).
 
+You can experiment with this [JSFiddle](https://jsfiddle.net/patros/m6zhx1w4/).
+
 ### CDN
 
 Feel free to use the jsDelivr CDN to save hosting the file yourself...  
