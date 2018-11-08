@@ -31,24 +31,31 @@
     var options;
 
     if (window.environmentIndicatorOptions) {
+        // if global options have been defined use them
         options = createOptions(window.environmentIndicatorOptions);
     } else {
+        // otherwise try and parse query string parameters from the script tag
         var scripts = document.getElementsByTagName('script');
         var thisScript = scripts[scripts.length - 1];
         var queryString = thisScript.src.replace(/^[^\?]+\??/,'');
         options = createOptions(parseQueryString(queryString));
     }
 
+    // create our div
     var div = document.createElement("DIV");
     div.className = "environment-indicator";
 
+    // create a text node for our content
     var t = document.createTextNode(options.content);
     div.appendChild(t);
+    // we need to delete content so it doesn't get applied as a style below
     delete options.content;
 
     var onRight = options.onRight;
+    // we need to delete onRight so it doesn't get applied as a style below
     delete options.onRight;
 
+    // apply all remaining options as an inline style on our div
     for (var option in options) {
         if (options.hasOwnProperty(option)) {
             div.style[option] = options[option];
@@ -56,6 +63,7 @@
     }
     document.body.appendChild(div);
 
+    // calculate offsets, position, etc
     var sideOffset = Math.ceil(Math.sqrt(div.offsetHeight * div.offsetHeight / 2));
 
     if (!("left" in options || "right" in options)) {
@@ -74,6 +82,7 @@
     if (!("top" in options)) div.style.top = topOffset + "px";
 
     function createOptions(providedOptions) {
+        // default options
         var options = {
             content: "environment indicator",
             onRight: false,
@@ -96,6 +105,7 @@
             options.transform = "rotate(45deg)";
             options["transform-origin"] = "right top";
         }
+        // override default options with provided ones
         for (var optionName in providedOptions) {
             if (providedOptions.hasOwnProperty(optionName)) {
                 options[optionName] = providedOptions[optionName];
