@@ -94,7 +94,7 @@ And this example demonstrates encoding a background-color value of #4286f4...
 <script src="https://cdn.jsdelivr.net/gh/patros/environment-indicator@latest/environment-indicator.js?content=Training Environment&background-color=%234286f4"></script>
 ```
 
-### Global Variable Example
+### Global Variable Examples
 
 ```
 <script>
@@ -105,3 +105,29 @@ And this example demonstrates encoding a background-color value of #4286f4...
 </script>
 <script src="https://cdn.jsdelivr.net/gh/patros/environment-indicator@latest/environment-indicator.js"></script>
 ```
+
+Or better yet, create environment specific files like this...
+
+`environment-indicator-options.js` for UAT
+```
+environmentIndicatorOptions = {
+    content: "UAT Environment"
+};
+```
+
+`environment-indicator-options.js` for production
+```
+environmentIndicatorOptions = {
+    display: "none",
+    content: "Production Environment"
+};
+```
+
+Then include something like this in your html...
+```
+<script src="/environment-indicator-options.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/patros/environment-indicator@latest/environment-indicator.js"></script>
+```
+
+Note that the div element will still be added to the DOM. It just won't be
+displayed.
