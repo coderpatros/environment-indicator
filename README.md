@@ -35,14 +35,14 @@ You can experiment with this [JSFiddle](https://jsfiddle.net/coderpatros/v36hjm0
 ### CDN
 
 Feel free to use the jsDelivr CDN to save hosting the file yourself...  
-[https://cdn.jsdelivr.net/gh/patros/environment-indicator@latest/environment-indicator.min.js](https://cdn.jsdelivr.net/gh/patros/environment-indicator@latest/environment-indicator.min.js)
+[https://cdn.jsdelivr.net/gh/coderpatros/environment-indicator@latest/environment-indicator.min.js](https://cdn.jsdelivr.net/gh/coderpatros/environment-indicator@latest/environment-indicator.min.js)
 
 Or you can reference specific versions...  
-[https://cdn.jsdelivr.net/gh/patros/environment-indicator@1.2.0/environment-indicator.min.js](https://cdn.jsdelivr.net/gh/patros/environment-indicator@1.2.0/environment-indicator.min.js)
+[https://cdn.jsdelivr.net/gh/coderpatros/environment-indicator@1.2.0/environment-indicator.min.js](https://cdn.jsdelivr.net/gh/coderpatros/environment-indicator@1.2.0/environment-indicator.min.js)
 
 Or full reference with integrity check...
 
-```<script src="https://cdn.jsdelivr.net/gh/patros/environment-indicator@1.2.0/environment-indicator.min.js" integrity="sha384-RD1YbBIt3Px1l5GSOQv4tMnK4kZFdtnrM465gepkcHh1aZZAYUzY42mLCg1iEdOF" crossorigin="anonymous"></script>```
+```<script src="https://cdn.jsdelivr.net/gh/coderpatros/environment-indicator@1.2.0/environment-indicator.min.js" integrity="sha384-RD1YbBIt3Px1l5GSOQv4tMnK4kZFdtnrM465gepkcHh1aZZAYUzY42mLCg1iEdOF" crossorigin="anonymous"></script>```
 
 ### Available Options
 
@@ -86,12 +86,12 @@ they will be honoured.
 ### Query String Examples
 
 ```
-<script src="https://cdn.jsdelivr.net/gh/patros/environment-indicator@latest/environment-indicator.js?content=Training Environment&background-color=deeppink"></script>
+<script src="https://cdn.jsdelivr.net/gh/coderpatros/environment-indicator@latest/environment-indicator.js?content=Training Environment&background-color=deeppink"></script>
 ```
 
 And this example demonstrates encoding a background-color value of #4286f4...
 ```
-<script src="https://cdn.jsdelivr.net/gh/patros/environment-indicator@latest/environment-indicator.js?content=Training Environment&background-color=%234286f4"></script>
+<script src="https://cdn.jsdelivr.net/gh/coderpatros/environment-indicator@latest/environment-indicator.js?content=Training Environment&background-color=%234286f4"></script>
 ```
 
 ### Global Variable Examples
@@ -103,7 +103,7 @@ And this example demonstrates encoding a background-color value of #4286f4...
         "background-color": "deeppink"
     };
 </script>
-<script src="https://cdn.jsdelivr.net/gh/patros/environment-indicator@latest/environment-indicator.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/coderpatros/environment-indicator@latest/environment-indicator.js"></script>
 ```
 
 Or better yet, create environment specific files like this...
@@ -126,7 +126,7 @@ environmentIndicatorOptions = {
 Then include something like this in your html...
 ```
 <script src="/environment-indicator-options.js"></script>
-<script src="https://cdn.jsdelivr.net/gh/patros/environment-indicator@latest/environment-indicator.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/coderpatros/environment-indicator@latest/environment-indicator.js"></script>
 ```
 
 Note that the div element will still be added to the DOM. It just won't be
