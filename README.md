@@ -30,7 +30,7 @@ async or defer. (This may actually work under some circumstances, but it can
 break without warning.) And remember to encode any values as required (there 
 is an example below for hash value colours).
 
-You can experiment with this [JSFiddle](https://jsfiddle.net/patros/m6zhx1w4/).
+You can experiment with this [JSFiddle](https://jsfiddle.net/coderpatros/v36hjm0o/2/).
 
 ### CDN
 
